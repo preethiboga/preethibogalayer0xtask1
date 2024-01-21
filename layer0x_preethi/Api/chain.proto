@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+service chainService{
+    rpc getStatus(Empty) returns (StatusList){};
+    rpc getchain(Empty) returns (ChainsList){};
+    rpc createchain(Chains) returns (Chains){};
+    rpc update(Chains) returns (Chains);
+    rpc delete(ChainsId) returns (Empty){};
+}
+message ChainsId{
+    string name=1;
+}
+
+message Chains{
+    string name=1;
+    string chainId=2;
+    string apiUrl=3;
+    string rpcUrl = 4;
+}
+message ChainsList{
+    repeated Chains chainsList =1;
+}
+message status{
+    string name=1;
+    string Status =2;
+    int32 height =3;
+}
+message StatusList{
+    repeated status statusList =1;
+}
+message Empty{}

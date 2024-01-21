@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exitt"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.9.14",
+    "@grpc/proto-loader": "^0.7.10",
+    "axios": "^1.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0",
+    "nodemon": "^3.0.2",
+    "protobufjs": "^7.2.5",
+    "readline": "^1.3.0"
+  }
+}
